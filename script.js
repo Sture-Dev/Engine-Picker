@@ -75,12 +75,12 @@ const ENGINE_DESCRIPTIONS = {
 
     bevy: {
         title: "Bevy",
-        description: "You like Rust don't you? Becy is a modern, code-first engine built around Rust and ECS principles. It's exciting and powerful if you enjoy systems programming and full control, but it expects you to be comfortable working closer to the hardware."
+        description: "You like Rust don't you? Bevy is a modern, code-first engine built around Rust and ECS principles. It's exciting and powerful if you enjoy systems programming and full control, but it expects you to be comfortable working closer to the hardware."
     },
 
     pico8: {
         title: "PICO-8",
-        description: "You wan't to dip your toes into game dev? Amazing! PICO-8 is a fun tool focused on creativity with limitations. It's perfect for beginners or anyone who wants fast, fun results. It encourages simple ideas, strong design, and learning by doing."
+        description: "You want to dip your toes into game dev? Amazing! PICO-8 is a fun tool focused on creativity with limitations. It's perfect for beginners or anyone who wants fast, fun results. It encourages simple ideas, strong design, and learning by doing."
     },
 
     custom: {
@@ -100,14 +100,24 @@ function showResult() {
     const result = ENGINE_DESCRIPTIONS[winner];
     const holder = document.getElementById("form_holder");
     holder.innerHTML = `
-    <h1>Your Top Pick</h1>
-    <h2>${result.title}</h2>
+    <h2>Your Top Pick</h2>
+    <h1>${result.title}</h1>
     <p>${result.description}</p>
-    <h1>Alternative</h1>
-    <h2>${ENGINE_DESCRIPTIONS[runnerUp].title}</h2>
+    <h2>Alternative</h2>
+    <h1>${ENGINE_DESCRIPTIONS[runnerUp].title}</h1>
     <p>${ENGINE_DESCRIPTIONS[runnerUp].description}</p>
 `;
-    holder.appendChild(resetButton)
+    holder.appendChild(resetButton);
+    const disclaimerTitle = document.createElement("h2");
+    disclaimerTitle.id = "disclaimer";
+    disclaimerTitle.textContent = "Disclaimer";
+
+    const disclaimerText = document.createElement("p");
+    disclaimerText.textContent =
+        "This is an opinionated tool, not a rulebook. It’s meant to give you a good starting point. Thanks for checking in!";
+
+    holder.appendChild(disclaimerTitle);
+    holder.appendChild(disclaimerText);
 }
 
 function initScores() {

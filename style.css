@@ -58,10 +58,9 @@ h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 650;
     letter-spacing: 0.6px;
     color: var(--text-soft);
-    opacity: 0.9;
 }
 
 p {
@@ -73,6 +72,9 @@ p {
     letter-spacing: 0.3px;
     color: var(--text-soft);
     opacity: 0.85;
+}
+#disclaimer{
+    margin-top: 30px;
 }
 
 
@@ -200,7 +202,7 @@ p {
 
 #skip_button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 117, 32, 0.705);
+    box-shadow: 0 8px 20px rgba(220, 151, 107, 0.705);
     filter: brightness(1.05);
 }
 
