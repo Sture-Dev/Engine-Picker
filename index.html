@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Engine Picker</title>
+    <script src="script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <template id="q1">
+        <h1>Welcome</h1>
+        <p id="question">Which programming language are you most comfortable with?</p>
+        <form onsubmit="language(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="python">
+                <label for="python">Python / Python-like</label>
+
+                <input type="radio" name="options" id="csharp">
+                <label for="csharp">C#</label>
+
+                <input type="radio" name="options" id="cpp">
+                <label for="cpp">C++</label>
+
+                <input type="radio" name="options" id="rust">
+                <label for="rust">Rust</label>
+
+                <input type="radio" name="options" id="js">
+                <label for="js">JavaScript / TypeScript</label>
+
+                <input type="radio" name="options" id="lua">
+                <label for="lua">Lua</label>
+
+                <input type="radio" name="options" id="nolang">
+                <label for="nolang">I’m new to programming</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+    <template id="q2">
+        <h1>Experience</h1>
+        <p id="question">How many games have you made before?</p>
+        <form onsubmit="experience(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="none">
+                <label for="none">None yet</label>
+
+                <input type="radio" name="options" id="prototypes">
+                <label for="prototypes">Only small prototypes</label>
+
+                <input type="radio" name="options" id="one">
+                <label for="one">1–2 small finished games</label>
+
+                <input type="radio" name="options" id="many">
+                <label for="many">Several finished games</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+    <template id="q3">
+        <h1>Goal</h1>
+        <p id="question">What is your main goal right now?</p>
+        <form onsubmit="goal(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="learn">
+                <label for="learn">Learn game development</label>
+
+                <input type="radio" name="options" id="finish">
+                <label for="finish">Finish a small game</label>
+
+                <input type="radio" name="options" id="commercial">
+                <label for="commercial">Build a commercial game</label>
+
+                <input type="radio" name="options" id="experiment">
+                <label for="experiment">Experiment with engines</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+    <template id="q4">
+        <h1>Scope</h1>
+        <p id="question">How big is the game you’re trying to make?</p>
+        <form onsubmit="scope(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="tiny">
+                <label for="tiny">Tiny (one mechanic)</label>
+
+                <input type="radio" name="options" id="small">
+                <label for="small">Small but complete</label>
+
+                <input type="radio" name="options" id="medium">
+                <label for="medium">Medium-sized project</label>
+
+                <input type="radio" name="options" id="big">
+                <label for="big">Big / ambitious</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+    <template id="q5">
+        <h1>Preferences</h1>
+        <p id="question">Which frustrates you the most?</p>
+        <form onsubmit="frustration(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="engine">
+                <label for="engine">The engine fights me</label>
+
+                <input type="radio" name="options" id="control">
+                <label for="control">I want more low-level control</label>
+
+                <input type="radio" name="options" id="performance">
+                <label for="performance">Performance issues appear too early</label>
+
+                <input type="radio" name="options" id="boilerplate">
+                <label for="boilerplate">Too much setup before gameplay</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+    <template id="q6">
+        <h1>Priorities</h1>
+        <p id="question">What do you value more?</p>
+        <form onsubmit="priority(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="speed">
+                <label for="speed">Fast iteration</label>
+
+                <input type="radio" name="options" id="visuals">
+                <label for="visuals">Visual fidelity</label>
+
+                <input type="radio" name="options" id="scale">
+                <label for="scale">Long-term scalability</label>
+
+                <input type="radio" name="options" id="tech">
+                <label for="tech">Technical control</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+    <template id="q7">
+        <h1>Stability</h1>
+        <p id="question">How do you feel about engine updates breaking things?</p>
+        <form onsubmit="stability(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="stable">
+                <label for="stable">I want maximum stability</label>
+
+                <input type="radio" name="options" id="minor">
+                <label for="minor">Minor breakage is fine</label>
+
+                <input type="radio" name="options" id="edge">
+                <label for="edge">I like living on the edge</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+    <template id="q8">
+        <h1>Learning</h1>
+        <p id="question">How do you prefer to learn?</p>
+        <form onsubmit="learning(this); return false;">
+            <div id="radio_div">
+                <input type="radio" name="options" id="docs">
+                <label for="docs">Documentation</label>
+
+                <input type="radio" name="options" id="tutorials">
+                <label for="tutorials">Tutorials & videos</label>
+
+                <input type="radio" name="options" id="source">
+                <label for="source">Reading source code</label>
+
+                <input type="radio" name="options" id="trial">
+                <label for="trial">Trial and error</label>
+            </div>
+            <input type="submit" id="confirm_button" value="Confirm">
+        </form>
+    </template>
+
+
+</head>
+
+<body onload="load()">
+    <main>
+        <div id="form_holder">
+
+        </div>
+    </main>
+</body>
+
+</html>

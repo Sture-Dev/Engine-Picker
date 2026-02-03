@@ -1,0 +1,115 @@
+/* Reset & base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2b1b12, #3a2417);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fdf6f0;
+}
+
+/* Main container */
+main {
+    background: #1f140e;
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    color: #ffedd5;
+}
+
+#question{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    color: #ffedd5;
+}
+
+/* Radio group */
+#radio_div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Hide default radios */
+#radio_div input[type="radio"] {
+    display: none;
+}
+
+/* Custom radio labels */
+#radio_div label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.2rem;
+    border-radius: 12px;
+    background: #2a1a12;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease,
+        box-shadow 0.1s ease;
+    position: relative;
+    color: #fde8d9;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    
+}
+
+/* Checked state */
+#radio_div input[type="radio"]:checked + label {
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+    color: #2b1608;
+}
+
+
+
+/* Hover */
+#radio_div label:hover {
+    background: #3a2417;
+    transform: translateY(-1px);
+}
+
+/* Submit button */
+#confirm_button {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #77e171, #83edbf);
+    color: #3b1f0e;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+}
+
+#confirm_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 214, 126, 0.45);
+    filter: brightness(1.05);
+}
+
+#confirm_button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+}
