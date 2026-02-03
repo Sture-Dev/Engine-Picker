@@ -33,6 +33,9 @@
 
                 <input type="radio" name="options" id="nolang">
                 <label for="nolang">I’m new to programming</label>
+
+                <input type="radio" name="options" id="all">
+                <label for="all">I'll learn anything!</label>
             </div>
             <input type="submit" id="confirm_button" value="Confirm">
         </form>
@@ -106,7 +109,7 @@
                 <label for="engine">The engine fights me</label>
 
                 <input type="radio" name="options" id="control">
-                <label for="control">I want more low-level control</label>
+                <label for="control">Not having low-level control</label>
 
                 <input type="radio" name="options" id="performance">
                 <label for="performance">Performance issues appear too early</label>
@@ -126,7 +129,7 @@
                 <label for="speed">Fast iteration</label>
 
                 <input type="radio" name="options" id="visuals">
-                <label for="visuals">Visual fidelity</label>
+                <label for="visuals">Graphics capability</label>
 
                 <input type="radio" name="options" id="scale">
                 <label for="scale">Long-term scalability</label>
@@ -143,13 +146,13 @@
         <form onsubmit="stability(this); return false;">
             <div id="radio_div">
                 <input type="radio" name="options" id="stable">
-                <label for="stable">I want maximum stability</label>
+                <label for="stable">I don't take risks, maximum stability thanks!</label>
 
                 <input type="radio" name="options" id="minor">
-                <label for="minor">Minor breakage is fine</label>
+                <label for="minor">Updates are important, but they should be stable</label>
 
                 <input type="radio" name="options" id="edge">
-                <label for="edge">I like living on the edge</label>
+                <label for="edge">New features are allways fun!</label>
             </div>
             <input type="submit" id="confirm_button" value="Confirm">
         </form>
@@ -183,6 +186,7 @@
         <div id="form_holder">
 
         </div>
+        
         <div id="contact_info">
             <span class="contact_label">Contact</span>
             <p>contact.sture@gmail.com</p>
