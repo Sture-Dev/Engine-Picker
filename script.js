@@ -338,3 +338,12 @@ function learning(form) {
 
     nextQuestion();
 }
+
+function showEmail() {
+  const emailSpan = document.getElementById("email");
+  const button = document.getElementById("contact_button");
+
+  emailSpan.textContent = "contact.sture@gmail.com";
+  emailSpan.style.display = "block";
+  button.style.display = "none";
+}

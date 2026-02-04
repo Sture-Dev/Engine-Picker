@@ -210,13 +210,40 @@ p {
     transform: translateY(0);
     box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
 }
+#contact_button {
+    margin-top: 15px;
+    width: 100%;
+    min-width: 250px;
+    padding: 0.9rem;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--bg-soft);
+    color: var(--text-soft);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease;
+}
+
+#contact_button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(220, 151, 107, 0.705);
+    filter: brightness(1.05);
+}
+
+#contact_button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+}
 
 #contact_info {
+    min-width: 300px;
+    min-height: 110px;
     position: fixed;
     bottom: 1.2rem;
     right: 1.2rem;
     background: rgba(31, 20, 14, 0.85);
-    padding: 0.7rem 1rem;
+    padding: 0.7rem;
     border-radius: 12px;
     font-size: 0.85rem;
     color: var(--text-soft);
@@ -226,13 +253,25 @@ p {
 
 #contact_info .contact_label {
     display: block;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.8px;
     color: var(--text-main);
     opacity: 0.75;
     margin-bottom: 0.15rem;
+}
+#email {
+    text-align: center;
+    display: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    color: var(--text-main);
+    opacity: 0.75;
+    margin-bottom: 0.15rem;
+    margin-top: 0.15rem;
+    padding: 20px;
 }
 
 #contact_info p {
