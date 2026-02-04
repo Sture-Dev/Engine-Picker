@@ -3,7 +3,7 @@ let currentQuestion = 0;
 
 function load() {
     initScores();
-    showQuestion(questions[currentQuestion]);
+    showWelcome(questions[currentQuestion]);
 }
 
 // Create skip button
@@ -19,7 +19,12 @@ resetButton.id = "reset_button";
 resetButton.type = "button";
 resetButton.textContent = "Reset";
 resetButton.addEventListener("click", reset);
+function showWelcome(){
+    const holder = document.getElementById("form_holder");
+    const template = document.getElementById("welcome_page");
 
+    holder.replaceChildren(template.content.cloneNode(true));
+}
 
 function reset() {
     currentQuestion = 0;

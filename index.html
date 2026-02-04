@@ -7,9 +7,13 @@
     <title>Game Engine Picker</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
-
+    <template id = "welcome_page">
+        <h1>Game Engine Picker</h1>
+        <p><br>Answer 8 quick questions and get a personalized engine recommendation. Takes around 1 minute.<br><br><b>No signup. No tracking.</b></p>
+        <button id="confirm_button" onclick="reset()">Start Quiz</button>
+    </template>
     <template id="q1">
-        <h1>Welcome</h1>
+        <h1>Programming</h1>
         <p id="question">Which programming language are you most comfortable with?</p>
         <form onsubmit="language(this); return false;">
             <div id="radio_div">
